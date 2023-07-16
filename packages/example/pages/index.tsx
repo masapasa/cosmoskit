@@ -2,18 +2,10 @@ import { useChain, useWallet } from "@cosmos-kit/react";
 import React, { useEffect } from "react";
 
 import { ChainWalletdiv } from "../components";
-
-// const chainNames_1 = ["cosmoshub"];
-// const chainNames_2: string[] = ["cosmoshub"];
-
-const chainNames_1 = ["osmosis", "cosmoshub"];
-const chainNames_2 = ["stargaze", "chihuahua"];
-
-// const chainNames_1 = ["coreum"];
-// const chainNames_2 = [];
-
+const chainNames_1 = ["AuraTestnet"];
+const chainNames_2 = ["stargaze", "AuraTestnet"];
 export default () => {
-  const { username, connect, disconnect, wallet } = useChain(chainNames_1[0]);
+  const { username, connect, disconnect, wallet } = useChain("AuraTestnet");
   const { status: globalStatus, mainWallet } = useWallet(); // status here is the global wallet status for all activated chains (chain is activated when call useChain)
 
   useEffect(() => {
